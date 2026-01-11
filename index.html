@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Image Gallery</title>
+    
+    <!-- Google Fonts: Outfit for a modern, premium look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <h1>Visual<span>Gallery</span></h1>
+            <p>Explore our curated collection</p>
+            
+            <nav class="filter-nav">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="technology">Technology</button>
+                <button class="filter-btn" data-filter="people">People</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="gallery-grid" id="gallery">
+                <!-- Gallery items will be injected here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox hidden">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button id="close-lightbox" class="lightbox-control close" aria-label="Close">&times;</button>
+            <button id="prev-btn" class="lightbox-control prev" aria-label="Previous">&#10094;</button>
+            
+            <div class="lightbox-image-container">
+                <img id="lightbox-img" src="" alt="Full screen view">
+                <div class="lightbox-caption">
+                    <h3 id="lightbox-category">Category</h3>
+                    <p id="lightbox-desc">Image Description</p>
+                </div>
+            </div>
+
+            <button id="next-btn" class="lightbox-control next" aria-label="Next">&#10095;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
